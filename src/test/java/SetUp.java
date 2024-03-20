@@ -51,9 +51,12 @@ public class SetUp {
     }
 
     @AfterTest
-    @Parameters("browser")
-    public void Close(@Optional("chrome") String browser) throws IOException {
-        relatedActions.screenShots(driver, browser);
+    //@Parameters("browser")
+    public void Close() throws IOException {
+        prop = new Properties();
+        InputStream input = new FileInputStream(configPath);
+        prop.load(input);
+        relatedActions.screenShots(driver, prop.getProperty("browser"));
         driver.close();
     }
 }
