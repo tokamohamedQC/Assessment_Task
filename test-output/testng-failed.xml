@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" parallel="none">
+  <test name="Regression1(failed)" parallel="none">
+    <classes>
+      <class name="OpenBrowser">
+        <methods>
+          <include name="ValidScenario"/>
+          <include name="Close"/>
+          <include name="Open"/>
+        </methods>
+      </class> <!-- OpenBrowser -->
+    </classes>
+  </test> <!-- Regression1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
